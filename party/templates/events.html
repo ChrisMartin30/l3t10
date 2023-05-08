@@ -1,0 +1,28 @@
+<!-- Returns a list of all events that have been added by registered users -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+  Events
+{% endblock %}
+
+{% block content %}
+
+    <h3>Events that have been organised.</h3>
+    <br>
+
+    <ul>
+        {% for event in event_list %}
+            <h5>{{event.Title}}</h5>
+            <ul>
+                <li>{{event.event_date}}</li>
+                <li>{{event.location}} </li>
+            </ul>
+            <br>
+        {% endfor %}
+    </ul>
+   
+
+
+
+{% endblock %}

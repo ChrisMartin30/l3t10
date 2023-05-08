@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(209, 241, 246); 
+    background-image: linear-gradient(rgb(131, 224, 238),rgb(209, 241, 246));
+  }
+
+
+.footer {
+    position: fixed;
+    bottom: 2px;
+    padding: 3px;
+    width: 100%;
+}
+
+
+/* Add css so images are enlarged upon mouseover */
+.photo {
+    padding: 10px;
+    transition: transform .2s;
+    margin: 0 auto;
+  }
+  
+.photo:hover {
+    transform: scale(1.5); 
+  }
+
+
+ul.horizontal_list {
+    list-style: none;
+  }
+
+ul.horizontal_list li {
+    display: inline-block;
+    padding: 0 0.5rem;
+  }

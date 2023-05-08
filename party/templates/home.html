@@ -1,0 +1,69 @@
+<!-- Home page of the party -->
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+  Homepage
+{% endblock %}
+
+{% block content %}
+
+<!-- Greets user if logged in, otherwise prompts a log in. -->
+  <h4  style= "text-align: right;">
+    {% if user.is_authenticated %}
+    Welcome {{user.username}}
+    {% else %}
+    You are not logged in. You may click <a href="{% url 'user_auth:login'%}">here</a> to log in.
+    {% endif %}
+  </h4>
+    <hr>
+
+    <h2>Vote for The People Against Litter</h2>
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <p>In the forthcoming local elections, there's only one issue that <strong>truely</strong> matters: litter </p>
+        <p>By Voting for "The People Against Litter" on the 15th May you can send a 
+          strong message that you've had enough. </p>
+        <p>By voting for us on a single issue, we can be easily be judged on our results - a litter free community.</p>
+      </div>
+      <div class="col-md-4">
+        <figure class="photo">
+          <img src="{% static "images/ballot_paper.jpg" %}" alt="An image of a ballot paper" style="width:300px;" />
+          <figcaption>Remember to vote on the 15th May</figcaption>
+        </figure>
+        
+      </div>
+    </div>
+
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jCjeNZquEPU" title="YouTube video player"
+           frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </p>
+        
+      </div>
+      <div class="col-md-6">
+        <p>If you would like to know more about our vital work against litter and 
+          this campaign, please follow the link at the bottom of the page to join the Mailing list.</p>
+        <p>If you would like to get more involved, please register as a user and you 
+          will be able to set up your own Events. Perhaps you could set up some litter picking event
+          and use this to encourage others</p>
+      </div>
+      <div>
+        <p>If you would like to know more, please feel free to contact us in one of the following ways: </p>
+        <ul class="horizontal_list">
+          <li><a href="mailto: litter@no_to_litter.com">email</a></li>
+          <li><a href="https://www.twitter.com">Twitter</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>         
+        </ul>
+      </div>
+    </div>
+
+    
+{% endblock %}

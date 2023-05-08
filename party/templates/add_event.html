@@ -1,0 +1,32 @@
+<!-- Have a form so then logged in users can add grassroots events that will be occuring to support this election. -->
+{% extends 'base.html' %}
+
+{% block title %}
+  New Event
+{% endblock %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h2>Add a new event</h2>
+        <br>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <input type="submit" value="Add Event" class="btn btn-secondary">
+        </form>
+
+    {% else %}
+    <h3>You are not logged in</h3>
+        <p>Only registered users are allowed to add events to support him.
+            Please log in <a href="{% url 'user_auth:login'%}">here</a> or register as a new user.
+        </p>
+    {% endif %}
+    
+
+
+
+{% endblock %}

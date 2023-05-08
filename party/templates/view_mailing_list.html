@@ -1,0 +1,29 @@
+<!-- Allows registered users to see names of everyone who's signed up for the mailing list -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+  Mailing list members
+{% endblock %}
+
+{% block content %}
+
+    {% if user.is_authenticated %}
+        <h3>Here are people who have already signed up for our weekly updates</h3>
+        <br>
+
+        <ul>
+            {% for person in subscribers %}
+                <li>{{person.first_name}} {{person.last_name}}</li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>You are not logged in</h3>
+            <p>Only registered users are allowed to view members of the mailing list.
+                Please log in <a href="{% url 'user_auth:login'%}">here</a> or register as a new user.
+            </p>
+    {% endif %}
+
+
+{% endblock %}

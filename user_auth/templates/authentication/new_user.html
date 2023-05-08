@@ -1,0 +1,23 @@
+<!-- New user login screen -->
+
+{% extends "../base.html" %}
+
+{% block title %}
+    New user
+{% endblock %}
+
+
+{% block content %}
+    <h1>Register a new user.</h1>
+
+    <div class="container">
+        <div class="col-md-6">
+            <form action="{% url 'user_auth:new_user' %}" method='POST'>
+                {% csrf_token %}
+                {{ register_user.as_p }}
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

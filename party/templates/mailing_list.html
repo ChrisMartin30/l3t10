@@ -1,0 +1,27 @@
+<!-- Option to just join a mailing list to receive regular updates -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+  Join Mailing List
+{% endblock %}
+
+{% block content %}
+
+    <h2>Join Mailing list</h2>
+    <br>
+    <p>If you would like to receive regular updates on our campaign, please enter your details below.</p>
+    <p>You will get regular, exciting emails telling you all about what we've been up to.</p>
+    <hr>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <input type="submit" value="Add this person" class="btn btn-secondary">
+    </form>
+
+
+
+{% endblock %}
