@@ -9,8 +9,9 @@ from .forms import EventForm, MailingForm
 
 # Create your views here.
 
-# Home page
 def home(request):
+    """Returns the file home.html 
+    """
     return render(request, 'home.html', {},)
 
 
@@ -23,6 +24,8 @@ def events(request):
 
 # Adds event to the database
 def add_event(request):
+    """Adds an event to the events database using the EventForm.
+    """
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
@@ -33,8 +36,10 @@ def add_event(request):
     
     return render(request, 'add_event.html', {'form': form},)
 
-# Adds individual to mailing list
+
 def mailing_list(request):
+    """Adds details from a completed form to the mailing list database.
+    """
     if request.method == 'POST':
         form = MailingForm(request.POST)
         if form.is_valid():
@@ -47,6 +52,8 @@ def mailing_list(request):
 
 # Create a "view information about those who have signed up for the mailing list" option.
 def view_mailing_list(request):
+    """Creates a 'view mailing list' html file with a list of current users.
+    """
     mailing_list_members = Followers.objects.all()
 
     return render(request, 'view_mailing_list.html', {'subscribers': mailing_list_members})

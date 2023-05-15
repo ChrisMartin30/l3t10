@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 
 class Followers(models.Model):
     """Database of people who are on mailing list.
+
+    :param first_name: The User's first name.
+    :param last_name: The User's last name.
+    :param email: The user's email address
     """
     first_name = models.CharField('First Name', max_length=50)
     last_name = models.CharField('Last Name', max_length=50)
