@@ -75,6 +75,10 @@
 
 <div class="viewcode-block" id="Followers"><a class="viewcode-back" href="../../party.html#party.forms.Followers">[docs]</a><span class="k">class</span> <span class="nc">Followers</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Database of people who are on mailing list.</span>
+
+<span class="sd">    :param first_name: The User&#39;s first name.</span>
+<span class="sd">    :param last_name: The User&#39;s last name.</span>
+<span class="sd">    :param email: The user&#39;s email address</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">first_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">&#39;First Name&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
     <span class="n">last_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="s1">&#39;Last Name&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>

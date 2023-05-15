@@ -78,8 +78,9 @@
 
 <span class="c1"># Create your views here.</span>
 
-<span class="c1"># Home page</span>
 <div class="viewcode-block" id="home"><a class="viewcode-back" href="../../party.html#party.views.home">[docs]</a><span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the file home.html </span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;home.html&#39;</span><span class="p">,</span> <span class="p">{},)</span></div>
 
 
@@ -92,6 +93,8 @@
 
 <span class="c1"># Adds event to the database</span>
 <div class="viewcode-block" id="add_event"><a class="viewcode-back" href="../../party.html#party.views.add_event">[docs]</a><span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds an event to the events database using the EventForm.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
         <span class="n">form</span> <span class="o">=</span> <span class="n">EventForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
@@ -102,8 +105,10 @@
     
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;add_event.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">},)</span></div>
 
-<span class="c1"># Adds individual to mailing list</span>
+
 <div class="viewcode-block" id="mailing_list"><a class="viewcode-back" href="../../party.html#party.views.mailing_list">[docs]</a><span class="k">def</span> <span class="nf">mailing_list</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds details from a completed form to the mailing list database.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
         <span class="n">form</span> <span class="o">=</span> <span class="n">MailingForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
@@ -116,6 +121,8 @@
 
 <span class="c1"># Create a &quot;view information about those who have signed up for the mailing list&quot; option.</span>
 <div class="viewcode-block" id="view_mailing_list"><a class="viewcode-back" href="../../party.html#party.views.view_mailing_list">[docs]</a><span class="k">def</span> <span class="nf">view_mailing_list</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a &#39;view mailing list&#39; html file with a list of current users.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">mailing_list_members</span> <span class="o">=</span> <span class="n">Followers</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;view_mailing_list.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;subscribers&#39;</span><span class="p">:</span> <span class="n">mailing_list_members</span><span class="p">})</span></div>

@@ -358,6 +358,15 @@ object the first time, the query is executed.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">party.models.</span></span><span class="sig-name descname"><span class="pre">Followers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/party/models.html#Followers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#party.models.Followers" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
 <p>Database of people who are on mailing list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_name</strong> – The User’s first name.</p></li>
+<li><p><strong>last_name</strong> – The User’s last name.</p></li>
+<li><p><strong>email</strong> – The user’s email address</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py exception">
 <dt class="sig sig-object py" id="party.models.Followers.DoesNotExist">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#party.models.Followers.DoesNotExist" title="Permalink to this definition"></a></dt>
@@ -433,7 +442,8 @@ object the first time, the query is executed.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="party.views.add_event">
 <span class="sig-prename descclassname"><span class="pre">party.views.</span></span><span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/party/views.html#add_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#party.views.add_event" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Adds an event to the events database using the EventForm.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="party.views.events">
@@ -443,17 +453,20 @@ object the first time, the query is executed.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="party.views.home">
 <span class="sig-prename descclassname"><span class="pre">party.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/party/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#party.views.home" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Returns the file home.html</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="party.views.mailing_list">
 <span class="sig-prename descclassname"><span class="pre">party.views.</span></span><span class="sig-name descname"><span class="pre">mailing_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/party/views.html#mailing_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#party.views.mailing_list" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Adds details from a completed form to the mailing list database.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="party.views.view_mailing_list">
 <span class="sig-prename descclassname"><span class="pre">party.views.</span></span><span class="sig-name descname"><span class="pre">view_mailing_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/party/views.html#view_mailing_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#party.views.view_mailing_list" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>Creates a ‘view mailing list’ html file with a list of current users.</p>
+</dd></dl>
 
 </section>
 <section id="module-party">
