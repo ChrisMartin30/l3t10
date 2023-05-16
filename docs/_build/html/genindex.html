@@ -82,7 +82,9 @@
  | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
@@ -96,6 +98,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="party.html#party.models.Event.attendees">attendees (party.models.Event attribute)</a>
 </li>
+      <li><a href="user_auth.html#user_auth.views.authenticate_user">authenticate_user() (in module user_auth.views)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -106,6 +110,8 @@
 
       <ul>
         <li><a href="party.html#party.forms.MailingForm.base_fields">(party.forms.MailingForm attribute)</a>
+</li>
+        <li><a href="user_auth.html#user_auth.forms.SignUpForm.base_fields">(user_auth.forms.SignUpForm attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -119,9 +125,15 @@
       <ul>
         <li><a href="party.html#party.forms.MailingForm.declared_fields">(party.forms.MailingForm attribute)</a>
 </li>
+        <li><a href="user_auth.html#user_auth.forms.SignUpForm.declared_fields">(user_auth.forms.SignUpForm attribute)</a>
+</li>
       </ul></li>
       <li><a href="party.html#party.apps.PartyConfig.default_auto_field">default_auto_field (party.apps.PartyConfig attribute)</a>
+
+      <ul>
+        <li><a href="user_auth.html#user_auth.apps.UserAuthConfig.default_auto_field">(user_auth.apps.UserAuthConfig attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="party.migrations.html#party.migrations.0001_initial.Migration.dependencies">dependencies (party.migrations.0001_initial.Migration attribute)</a>
@@ -169,11 +181,13 @@
       <ul>
         <li><a href="party.html#party.forms.MailingForm.Meta.fields">(party.forms.MailingForm.Meta attribute)</a>
 </li>
-      </ul></li>
-      <li><a href="party.html#party.models.Followers.first_name">first_name (party.models.Followers attribute)</a>
+        <li><a href="user_auth.html#user_auth.forms.SignUpForm.Meta.fields">(user_auth.forms.SignUpForm.Meta attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="party.html#party.models.Followers.first_name">first_name (party.models.Followers attribute)</a>
+</li>
       <li><a href="party.html#party.models.Followers">Followers (class in party.models)</a>
 </li>
       <li><a href="party.html#party.models.Followers.DoesNotExist">Followers.DoesNotExist</a>
@@ -245,6 +259,8 @@
       <ul>
         <li><a href="party.html#party.forms.MailingForm.media">(party.forms.MailingForm property)</a>
 </li>
+        <li><a href="user_auth.html#user_auth.forms.SignUpForm.media">(user_auth.forms.SignUpForm property)</a>
+</li>
       </ul></li>
       <li><a href="party.migrations.html#party.migrations.0001_initial.Migration">Migration (class in party.migrations.0001_initial)</a>
 
@@ -256,6 +272,8 @@
 
       <ul>
         <li><a href="party.html#party.forms.MailingForm.Meta.model">(party.forms.MailingForm.Meta attribute)</a>
+</li>
+        <li><a href="user_auth.html#user_auth.forms.SignUpForm.Meta.model">(user_auth.forms.SignUpForm.Meta attribute)</a>
 </li>
       </ul></li>
       <li>
@@ -284,6 +302,24 @@
 </li>
         <li><a href="party.html#module-party.views">party.views</a>
 </li>
+        <li><a href="user_auth.html#module-user_auth">user_auth</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.admin">user_auth.admin</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.apps">user_auth.apps</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.forms">user_auth.forms</a>
+</li>
+        <li><a href="user_auth.migrations.html#module-user_auth.migrations">user_auth.migrations</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.models">user_auth.models</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.tests">user_auth.tests</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.urls">user_auth.urls</a>
+</li>
+        <li><a href="user_auth.html#module-user_auth.views">user_auth.views</a>
+</li>
       </ul></li>
   </ul></td>
 </tr></table>
@@ -292,6 +328,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="party.html#party.apps.PartyConfig.name">name (party.apps.PartyConfig attribute)</a>
+
+      <ul>
+        <li><a href="user_auth.html#user_auth.apps.UserAuthConfig.name">(user_auth.apps.UserAuthConfig attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="user_auth.html#user_auth.views.new_user">new_user() (in module user_auth.views)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -403,10 +447,101 @@
   </ul></td>
 </tr></table>
 
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="user_auth.html#user_auth.views.show_user">show_user() (in module user_auth.views)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="user_auth.html#user_auth.forms.SignUpForm">SignUpForm (class in user_auth.forms)</a>
+</li>
+      <li><a href="user_auth.html#user_auth.forms.SignUpForm.Meta">SignUpForm.Meta (class in user_auth.forms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="party.html#party.models.Event.Title">Title (party.models.Event attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    user_auth
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.admin
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.admin">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.apps
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.apps">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.forms
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.forms">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.migrations
+
+      <ul>
+        <li><a href="user_auth.migrations.html#module-user_auth.migrations">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    user_auth.models
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.models">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.tests
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.tests">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.urls
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.urls">module</a>
+</li>
+      </ul></li>
+      <li>
+    user_auth.views
+
+      <ul>
+        <li><a href="user_auth.html#module-user_auth.views">module</a>
+</li>
+      </ul></li>
+      <li><a href="user_auth.html#user_auth.views.user_login">user_login() (in module user_auth.views)</a>
+</li>
+      <li><a href="user_auth.html#user_auth.views.user_logout">user_logout() (in module user_auth.views)</a>
+</li>
+      <li><a href="user_auth.html#user_auth.apps.UserAuthConfig">UserAuthConfig (class in user_auth.apps)</a>
 </li>
   </ul></td>
 </tr></table>
