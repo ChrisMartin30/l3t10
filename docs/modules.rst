@@ -2,6 +2,7 @@ party
 =====
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    party
+   user_auth

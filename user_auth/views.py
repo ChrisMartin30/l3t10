@@ -7,12 +7,18 @@ from .forms import SignUpForm
 
 # Create your views here.
 
-# User login
+
 def user_login(request):
+    """
+    Returns the user login html
+    """
     return render(request, 'authentication/login.html')
 
 
 def authenticate_user(request):
+    """
+    User authentication.
+    """
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(username=username, password=password)
