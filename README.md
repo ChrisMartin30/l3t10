@@ -20,7 +20,7 @@ If accessing on [Docker playground](https://labs.play-with-docker.com), then log
 docker run -d -p 8000:8000 martinchris30/l3t10
 ```
 This should then download the image and allow the user to access the programme by clicking on the open port 8000 at the top of the screen, as shown in the image below.
-![Screenshot from docker playground, showing open port 8000](.\readme_images\docker_playground.png)
+![Screenshot from docker playground, showing open port 8000](readme_images/docker_playground.png)
 
 
 ## From Github
@@ -66,7 +66,7 @@ If the user joins the mailing list they fill in their details in the form; the S
 
 #### Registering as a new user
 If the user registers as a new user they fill in their details as shown in image below.
-![Screenshot of register new user page](.\readme_images\register_new_user.png)
+![Screenshot of register new user page](readme_images/register_new_user.png)
 
 
 ## Credits
