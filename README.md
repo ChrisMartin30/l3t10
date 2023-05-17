@@ -67,4 +67,12 @@ If the user joins the mailing list they fill in their details in the form; the S
 #### Registering as a new user
 If the user registers as a new user they fill in their details as shown in image below.
 ![Screenshot of register new user page](.\readme_images\register_new_user.png)
-The details of 
+
+
+## Credits
+This project has been done at the direction of HyperionDev University of Edinburgh Software Engineering Bootcamp, and their documentation has been used in the writing of this README file.
+
+
+## Future Improvements
+* The Sphinx documentation could be made more comprehensive, for both the party website app and the user authentication app.
+* The party website could be expanded and have further information, attachements such as a manifesto etc.
